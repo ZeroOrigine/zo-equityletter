@@ -16,7 +16,8 @@
     "@supabase/ssr": "^0.5.2",
     "stripe": "^17.5.0",
     "zod": "^3.24.2",
-    "resend": "^4.1.2"
+    "resend": "^4.1.2",
+    "@supabase/auth-helpers-nextjs": "^0.10.0"
   },
   "devDependencies": {
     "typescript": "^5.7.3",
