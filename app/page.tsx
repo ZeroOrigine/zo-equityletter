@@ -1,21 +1,26 @@
-import { createClient } from '@/lib/supabase/server';
-import { redirect } from 'next/navigation';
+import { redirect } from 'next/navigation'
+import MarketingPage from './(marketing)/page'
+
+async function getUser() {
+  try {
+    const { createClient } = await import('@/lib/supabase/server')
+    const supabase = await createClient()
+    const { data: { user } } = await supabase.auth.getUser()
+    return user
+  } catch {
+    return null
+  }
+}
 
 // Root page: if authenticated, go to dashboard. Otherwise, render marketing page.
 // The marketing page is in app/(marketing)/page.tsx via route group.
 // This file acts as the canonical root — it checks auth and delegates.
-
 export default async function RootPage() {
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
+  const user = await getUser()
 
   if (user) {
-    redirect('/dashboard');
+    redirect('/dashboard')
   }
 
-  // For unauthenticated users, we dynamically import and render the marketing page.
-  // Alternatively, this could redirect to a /home route, but inline rendering avoids
-  // an extra redirect hop.
-  const { default: MarketingPage } = await import('./(marketing)/page');
-  return <MarketingPage />;
+  return <MarketingPage />
 }
