@@ -3,17 +3,34 @@
 @tailwind utilities;
 
 @layer base {
-  :focus-visible {
-    @apply outline-2 outline-offset-2 outline-blue-600;
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
   }
 
-  ::selection {
-    @apply bg-blue-100 text-blue-900;
+  body {
+    @apply bg-white text-gray-900;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+
+  /* Ensure images are responsive by default */
+  img, video, svg {
+    @apply max-w-full h-auto;
   }
 }
 
 @layer components {
-  .skeleton {
-    @apply animate-pulse rounded bg-gray-200;
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-700 shadow-sm transition-all hover:bg-gray-50;
   }
 }
