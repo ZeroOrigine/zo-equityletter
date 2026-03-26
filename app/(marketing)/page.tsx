@@ -311,6 +311,7 @@ function PricingSection() {
       period: 'forever',
       description: 'Everything you need to understand equity.',
       cta: 'Get Started Free',
+      href: '/signup',
       popular: false,
       features: [
         { text: `${equityTerms.length}+ equity terms explained`, included: true },
@@ -328,6 +329,7 @@ function PricingSection() {
       period: '/month',
       description: 'For startup employees serious about maximizing equity.',
       cta: 'Start Pro Trial',
+      href: 'https://buy.stripe.com/dRm28s6WQfiA2wtfTw6sw07',
       popular: true,
       features: [
         { text: 'Everything in Free', included: true },
@@ -345,6 +347,7 @@ function PricingSection() {
       period: '/month',
       description: 'For founders and teams managing equity programs.',
       cta: 'Contact Sales',
+      href: 'mailto:support@zeroorigine.com',
       popular: false,
       features: [
         { text: 'Everything in Pro', included: true },
@@ -411,7 +414,7 @@ function PricingSection() {
               </ul>
 
               <a
-                href="/signup"
+                href={tier.href}
                 className={`block w-full text-center py-3 px-4 rounded-xl text-sm font-semibold transition-colors ${
                   tier.popular
                     ? 'bg-emerald-500 hover:bg-emerald-600 text-white shadow-lg shadow-emerald-500/25'
