@@ -3,7 +3,7 @@
 import { useState, Suspense } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { getSupabaseBrowserClient } from "@/utils/supabase/client";
+import { getSupabaseBrowserClient } from "@/lib/supabase-browser";
 
 function LoginForm() {
   const router = useRouter();
