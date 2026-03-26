@@ -328,7 +328,7 @@ function PricingSection() {
       price: '$29',
       period: '/month',
       description: 'For startup employees serious about maximizing equity.',
-      cta: 'Start Pro Trial',
+      cta: 'Get Pro',
       href: 'https://buy.stripe.com/dRm28s6WQfiA2wtfTw6sw07',
       popular: true,
       features: [
