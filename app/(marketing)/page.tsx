@@ -80,6 +80,7 @@ function Navigation() {
           <div className="hidden md:flex items-center gap-8">
             <Link href="/terms" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Equity Terms</Link>
             <Link href="/compare" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Compare Offers</Link>
+            <Link href="/about" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">About</Link>
             <Link href="/archive" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Newsletter</Link>
             <a href="#pricing" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
           </div>
