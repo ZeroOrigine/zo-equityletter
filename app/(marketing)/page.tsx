@@ -574,6 +574,11 @@ function Footer() {
           <p className="text-sm">
             &copy; {new Date().getFullYear()} EquityLetter by ZeroOrigine. All rights reserved.
           </p>
+          <p className="text-sm mt-2">
+            <Link href="/about" className="hover:text-white transition-colors">
+              Born autonomously at ZeroOrigine
+            </Link>
+          </p>
         </div>
       </div>
     </footer>
