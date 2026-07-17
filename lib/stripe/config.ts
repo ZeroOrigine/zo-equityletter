@@ -99,36 +99,6 @@ export const PLANS: PlanConfig[] = [
       },
     },
   },
-  {
-    name: 'Enterprise',
-    slug: 'enterprise',
-    description: 'For large organizations',
-    features: [
-      'Everything in Pro',
-      'Unlimited recipients',
-      'Custom integrations (API access)',
-      'SSO / SAML support',
-      'Dedicated account manager',
-      'Custom SLA',
-      'Data export in standard formats',
-      'Audit logs',
-    ],
-    limits: {
-      lettersPerMonth: -1,
-      recipientsPerLetter: -1,
-      templates: -1,
-    },
-    prices: {
-      monthly: {
-        amount: 199,
-        priceId: process.env.NEXT_PUBLIC_STRIPE_ENTERPRISE_MONTHLY_PRICE_ID || 'price_enterprise_monthly',
-      },
-      yearly: {
-        amount: 1990,
-        priceId: process.env.NEXT_PUBLIC_STRIPE_ENTERPRISE_YEARLY_PRICE_ID || 'price_enterprise_yearly',
-      },
-    },
-  },
 ];
 
 export function getPlanBySlug(slug: string): PlanConfig | undefined {
