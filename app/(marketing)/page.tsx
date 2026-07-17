@@ -342,24 +342,6 @@ function PricingSection() {
         { text: 'Early access to new tools', included: true },
       ],
     },
-    {
-      name: 'Enterprise',
-      price: '$99',
-      period: '/month',
-      description: 'For founders and teams managing equity programs.',
-      cta: 'Contact Sales',
-      href: 'mailto:support@zeroorigine.com',
-      popular: false,
-      features: [
-        { text: 'Everything in Pro', included: true },
-        { text: 'Team equity dashboard', included: true },
-        { text: 'Cap table integration', included: true },
-        { text: 'Board-ready equity reports', included: true },
-        { text: 'SSO & admin controls', included: true },
-        { text: 'Dedicated account manager', included: true },
-        { text: 'SLA & priority support', included: true },
-      ],
-    },
   ];
 
   return (
@@ -375,7 +357,7 @@ function PricingSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           {tiers.map((tier) => (
             <div
               key={tier.name}
